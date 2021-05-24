@@ -66,36 +66,17 @@ public class GestionReservas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        crearBtn = new javax.swing.JButton();
-        jbtnSalir = new javax.swing.JButton();
-        editBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableReservas = new javax.swing.JTable();
-        btnBorrar = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        crearBtn.setText("Crear");
-        crearBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                crearBtnActionPerformed(evt);
-            }
-        });
-
-        jbtnSalir.setText("Volver");
-        jbtnSalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnSalirActionPerformed(evt);
-            }
-        });
-
-        editBtn.setText("Editar");
-        editBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editBtnActionPerformed(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("Gestionar reservas");
@@ -130,12 +111,47 @@ public class GestionReservas extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tableReservas);
 
-        btnBorrar.setText("Borrar");
-        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+        jMenu1.setText("Opciones");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setText("Crear");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBorrarActionPerformed(evt);
+                jMenuItem1ActionPerformed(evt);
             }
         });
+        jMenu1.add(jMenuItem1);
+
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setText("Editar");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
+        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem3.setText("Borrar");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem3);
+
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem4.setText("Volver");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem4);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -144,73 +160,24 @@ public class GestionReservas extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbtnSalir)
-                .addGap(22, 22, 22))
+                .addGap(22, 540, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 771, Short.MAX_VALUE)
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(crearBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(editBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnBorrar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jbtnSalir))
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(crearBtn)
-                    .addComponent(editBtn)
-                    .addComponent(btnBorrar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel1)
+                .addGap(79, 79, 79)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void crearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearBtnActionPerformed
-        CrearReserva cr = new CrearReserva();
-        cr.setLocationRelativeTo(null);
-        cr.setVisible(true);
-        cr.setReservaData(false, null, this);
-    }//GEN-LAST:event_crearBtnActionPerformed
-
-    private void jbtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSalirActionPerformed
-        MenuHotel menuHotel = new MenuHotel();
-        menuHotel.setLocationRelativeTo(null);
-        menuHotel.setVisible(true);
-        menuHotel.infoEmpleado(empleadoLogeado);
-        dispose();
-    }//GEN-LAST:event_jbtnSalirActionPerformed
-
-    private void editBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editBtnActionPerformed
-        if (reservaEdit == null) {
-            JOptionPane.showMessageDialog(null, "Debe seleccionar un registro");
-            return;
-        }
-
-        if (!reservaEdit.isActivo()) {
-            JOptionPane.showMessageDialog(null, "Esta reserva ya no se puede editar, porque esta vencida.");
-            return;
-        }
-
-        CrearReserva cr = new CrearReserva();
-        cr.setLocationRelativeTo(null);
-        cr.setVisible(true);
-        cr.setReservaData(true, reservaEdit, this);
-    }//GEN-LAST:event_editBtnActionPerformed
 
     private void tableReservasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableReservasMouseClicked
         JTable source = (JTable) evt.getSource();
@@ -228,7 +195,31 @@ public class GestionReservas extends javax.swing.JFrame {
         reservaEdit = reserva;
     }//GEN-LAST:event_tableReservasMouseClicked
 
-    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        CrearReserva cr = new CrearReserva();
+        cr.setLocationRelativeTo(null);
+        cr.setVisible(true);
+        cr.setReservaData(false, null, this);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        if (reservaEdit == null) {
+            JOptionPane.showMessageDialog(null, "Debe seleccionar un registro");
+            return;
+        }
+
+        if (!reservaEdit.isActivo()) {
+            JOptionPane.showMessageDialog(null, "Esta reserva ya no se puede editar, porque esta vencida.");
+            return;
+        }
+
+        CrearReserva cr = new CrearReserva();
+        cr.setLocationRelativeTo(null);
+        cr.setVisible(true);
+        cr.setReservaData(true, reservaEdit, this);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         if (reservaEdit == null) {
             JOptionPane.showMessageDialog(null, "Debe seleccionar un registro");
             return;
@@ -237,7 +228,15 @@ public class GestionReservas extends javax.swing.JFrame {
         reservaService.deleteReserva(reservaEdit);
         loadData();
         JOptionPane.showMessageDialog(null, "Se elimino correctamente la reserva");
-    }//GEN-LAST:event_btnBorrarActionPerformed
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        MenuHotel menuHotel = new MenuHotel();
+        menuHotel.setLocationRelativeTo(null);
+        menuHotel.setVisible(true);
+        menuHotel.infoEmpleado(empleadoLogeado);
+        dispose();
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     public void infoEmpleado(Empleado empleado) {
         this.empleadoLogeado = empleado;
@@ -280,12 +279,14 @@ public class GestionReservas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBorrar;
-    private javax.swing.JButton crearBtn;
-    private javax.swing.JButton editBtn;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton jbtnSalir;
     private javax.swing.JTable tableReservas;
     // End of variables declaration//GEN-END:variables
 }

@@ -6,6 +6,8 @@
 package gestionhotel.frame;
 
 import gestionhotel.dto.Empleado;
+import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -19,7 +21,7 @@ public class MenuHotel extends javax.swing.JFrame {
     public MenuHotel() {
         initComponents();
     }
-    
+
     private Empleado empleadoLogeado = null;
 
     /**
@@ -36,8 +38,15 @@ public class MenuHotel extends javax.swing.JFrame {
         buttonHabitaciones1 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
         labelUser = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,12 +77,60 @@ public class MenuHotel extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("Menu gestión Hotel Verde");
 
-        jButton2.setText("Salir");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jMenu3.setText("Gestionar");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setText("Habitaciones");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jMenuItem1ActionPerformed(evt);
             }
         });
+        jMenu3.add(jMenuItem1);
+
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setText("Reservas");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem2);
+
+        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem3.setText("Empleados");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu3);
+
+        jMenu5.setText("Opciones");
+
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem4.setText("Acerca de");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem4);
+
+        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem5.setText("Salir");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem5);
+
+        jMenuBar1.add(jMenu5);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -83,9 +140,7 @@ public class MenuHotel extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelUser, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(jButton2)
+                .addComponent(labelUser, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(94, 94, 94)
@@ -105,8 +160,7 @@ public class MenuHotel extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2)
-                    .addComponent(labelUser))
+                    .addComponent(labelUser, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addComponent(jLabel2)
                 .addGap(57, 57, 57)
@@ -115,18 +169,11 @@ public class MenuHotel extends javax.swing.JFrame {
                 .addComponent(buttonHabitaciones1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        IniciarSesion iniciarSesion = new IniciarSesion();
-        iniciarSesion.setLocationRelativeTo(null);
-        iniciarSesion.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void buttonHabitacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHabitacionesActionPerformed
         GestionHabitaciones gestionHabitaciones = new GestionHabitaciones();
@@ -151,6 +198,42 @@ public class MenuHotel extends javax.swing.JFrame {
         gestionarEmpleados.infoEmpleado(empleadoLogeado);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        GestionHabitaciones gestionHabitaciones = new GestionHabitaciones();
+        gestionHabitaciones.setLocationRelativeTo(null);
+        gestionHabitaciones.setVisible(true);
+        gestionHabitaciones.infoEmpleado(empleadoLogeado);
+        dispose();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        GestionReservas gestionReservas = new GestionReservas();
+        gestionReservas.setLocationRelativeTo(null);
+        gestionReservas.setVisible(true);
+        gestionReservas.infoEmpleado(empleadoLogeado);
+        dispose();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        GestionarEmpleados gestionarEmpleados = new GestionarEmpleados();
+        gestionarEmpleados.setLocationRelativeTo(null);
+        gestionarEmpleados.setVisible(true);
+        gestionarEmpleados.infoEmpleado(empleadoLogeado);
+        dispose();
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        JOptionPane.showMessageDialog(null,"Aplicacion de gestión de hotel verde "
+                + " presentado a la CUN materia PROGRAMACION ORIENTADA A OBJETOS 2 30133");
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        IniciarSesion iniciarSesion = new IniciarSesion();
+        iniciarSesion.setLocationRelativeTo(null);
+        iniciarSesion.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,7 +270,7 @@ public class MenuHotel extends javax.swing.JFrame {
             }
         });
     }
-    
+
     public void infoEmpleado(Empleado empleado) {
         this.empleadoLogeado = empleado;
         this.labelUser.setText(empleadoLogeado.getFirstname() + " " + empleadoLogeado.getLastname());
@@ -197,9 +280,16 @@ public class MenuHotel extends javax.swing.JFrame {
     private javax.swing.JButton buttonHabitaciones;
     private javax.swing.JButton buttonHabitaciones1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JLabel labelUser;
     // End of variables declaration//GEN-END:variables
 }

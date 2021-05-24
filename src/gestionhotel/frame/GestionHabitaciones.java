@@ -49,10 +49,12 @@ public class GestionHabitaciones extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableHabitaciones = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jbtnSalir = new javax.swing.JButton();
-        editBtn = new javax.swing.JButton();
-        deleteBtn = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,33 +91,47 @@ public class GestionHabitaciones extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tableHabitaciones);
 
-        jButton1.setText("Crear");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        jMenu1.setText("Opciones");
 
-        jbtnSalir.setText("Volver");
-        jbtnSalir.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setText("Crear");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnSalirActionPerformed(evt);
+                jMenuItem1ActionPerformed(evt);
             }
         });
+        jMenu1.add(jMenuItem1);
 
-        editBtn.setText("Editar");
-        editBtn.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem2.setText("Editar");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editBtnActionPerformed(evt);
+                jMenuItem2ActionPerformed(evt);
             }
         });
+        jMenu1.add(jMenuItem2);
 
-        deleteBtn.setText("Borrar");
-        deleteBtn.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem3.setText("Borrar");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteBtnActionPerformed(evt);
+                jMenuItem3ActionPerformed(evt);
             }
         });
+        jMenu1.add(jMenuItem3);
+
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem4.setText("Volver");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem4);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -124,56 +140,24 @@ public class GestionHabitaciones extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbtnSalir)
-                .addGap(22, 22, 22))
+                .addGap(22, 293, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(editBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(deleteBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jbtnSalir))
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(editBtn)
-                    .addComponent(deleteBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel1)
+                .addGap(79, 79, 79)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jbtnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSalirActionPerformed
-        MenuHotel menuHotel = new MenuHotel();
-        menuHotel.setLocationRelativeTo(null);
-        menuHotel.setVisible(true);
-        menuHotel.infoEmpleado(empleadoLogeado);
-        dispose();
-    }//GEN-LAST:event_jbtnSalirActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        CrearHabitacion crearHabitacion = new CrearHabitacion();
-        crearHabitacion.setLocationRelativeTo(null);
-        crearHabitacion.setVisible(true);
-        crearHabitacion.setCrearHab(this);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     public void updateData() {
         habitaciones = habitacionService.getHabitaciones();
@@ -197,18 +181,6 @@ public class GestionHabitaciones extends javax.swing.JFrame {
         }
     }
 
-    private void editBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editBtnActionPerformed
-        if (codigoHabitacion == null) {
-            JOptionPane.showMessageDialog(null, "Debe seleccionar un registro");
-            return;
-        }
-
-        EditarHabitacion editarHabitacion = new EditarHabitacion();
-        editarHabitacion.setLocationRelativeTo(null);
-        editarHabitacion.setVisible(true);
-        editarHabitacion.setHabitacionEdit(this.codigoHabitacion, this);
-    }//GEN-LAST:event_editBtnActionPerformed
-
     String estadoHabitacion = null;
     private void tableHabitacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableHabitacionesMouseClicked
         JTable source = (JTable) evt.getSource();
@@ -219,7 +191,26 @@ public class GestionHabitaciones extends javax.swing.JFrame {
         this.codigoHabitacion = (String) s;
     }//GEN-LAST:event_tableHabitacionesMouseClicked
 
-    private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        CrearHabitacion crearHabitacion = new CrearHabitacion();
+        crearHabitacion.setLocationRelativeTo(null);
+        crearHabitacion.setVisible(true);
+        crearHabitacion.setCrearHab(this);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        if (codigoHabitacion == null) {
+            JOptionPane.showMessageDialog(null, "Debe seleccionar un registro");
+            return;
+        }
+
+        EditarHabitacion editarHabitacion = new EditarHabitacion();
+        editarHabitacion.setLocationRelativeTo(null);
+        editarHabitacion.setVisible(true);
+        editarHabitacion.setHabitacionEdit(this.codigoHabitacion, this);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         try {
             if (codigoHabitacion == null) {
                 JOptionPane.showMessageDialog(null, "Debe seleccionar un registro");
@@ -238,7 +229,15 @@ public class GestionHabitaciones extends javax.swing.JFrame {
         } catch (Exception ex) {
             Logger.getLogger(GestionHabitaciones.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_deleteBtnActionPerformed
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        MenuHotel menuHotel = new MenuHotel();
+        menuHotel.setLocationRelativeTo(null);
+        menuHotel.setVisible(true);
+        menuHotel.infoEmpleado(empleadoLogeado);
+        dispose();
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -279,12 +278,14 @@ public class GestionHabitaciones extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton deleteBtn;
-    private javax.swing.JButton editBtn;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton jbtnSalir;
     private javax.swing.JTable tableHabitaciones;
     // End of variables declaration//GEN-END:variables
 }
